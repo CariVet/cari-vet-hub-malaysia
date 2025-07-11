@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { PawPrint, Menu, X, MapPin, Phone } from 'lucide-react';
+import { PawPrint, Menu, X, MapPin, List } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,8 +44,8 @@ const Navigation = () => {
               </Link>
             ))}
             <Button variant="medical" size="sm">
-              <Phone className="w-4 h-4" />
-              Emergency
+              <List className="w-4 h-4" />
+              List Clinics
             </Button>
           </div>
 
@@ -84,8 +84,8 @@ const Navigation = () => {
               ))}
               <div className="pt-2">
                 <Button variant="medical" size="sm" className="w-full">
-                  <Phone className="w-4 h-4" />
-                  Emergency
+                  <List className="w-4 h-4" />
+                  List Clinics
                 </Button>
               </div>
             </div>
