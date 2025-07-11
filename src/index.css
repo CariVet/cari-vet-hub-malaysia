@@ -2,39 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* CariVet Design System - Professional Veterinary Platform */
 
 @layer base {
   :root {
+    /* Core Background & Text */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
+    /* Card Components */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
+    /* Popover Components */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand - Emerald Medical */
+    --primary: 158 64% 20%;        /* Emerald-700 #047857 */
+    --primary-foreground: 0 0% 100%;
+    --primary-50: 152 81% 96%;     /* Very light emerald */
+    --primary-100: 149 80% 90%;    /* Light emerald */
+    --primary-500: 160 84% 39%;    /* Base emerald #059669 */
+    --primary-600: 158 64% 52%;    /* Medium emerald #10B981 */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary Grays */
+    --secondary: 210 20% 98%;      /* Light gray */
+    --secondary-foreground: 210 11% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Elements */
+    --muted: 220 14% 96%;          /* Very light gray */
+    --muted-foreground: 220 9% 46%; /* Medium gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Colors */
+    --accent: 152 81% 96%;         /* Light emerald accent */
+    --accent-foreground: 158 64% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status Colors */
+    --success: 142 76% 36%;        /* Green #16A34A */
+    --success-foreground: 0 0% 100%;
+    --warning: 25 95% 53%;         /* Orange #EA580C */
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;      /* Red #DC2626 */
+    --destructive-foreground: 0 0% 100%;
+    --info: 217 91% 60%;           /* Blue #2563EB */
+    --info-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Form Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 158 64% 20%;
+
+    /* Emergency Status */
+    --emergency: 0 84% 60%;
+    --emergency-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-500)), hsl(var(--primary-600)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-600)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 hsl(var(--foreground) / 0.1), 0 1px 2px 0 hsl(var(--foreground) / 0.06);
+    --shadow-card-hover: 0 4px 6px -1px hsl(var(--foreground) / 0.1), 0 2px 4px -1px hsl(var(--foreground) / 0.06);
+    --shadow-medical: 0 2px 4px 0 hsl(var(--primary) / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
 
     --radius: 0.5rem;
 
@@ -100,6 +135,51 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom component classes for CariVet */
+  .medical-card {
+    @apply bg-card rounded-lg border border-border shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300;
+  }
+
+  .clinic-card {
+    @apply medical-card p-6 hover:scale-[1.02] cursor-pointer;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .status-open {
+    @apply inline-flex items-center gap-1 text-sm font-medium text-emerald-700;
+  }
+
+  .status-closed {
+    @apply inline-flex items-center gap-1 text-sm font-medium text-gray-500;
+  }
+
+  .status-emergency {
+    @apply inline-flex items-center gap-1 text-sm font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full;
+  }
+
+  .service-tag {
+    @apply inline-block px-2 py-1 text-xs font-medium bg-emerald-50 text-emerald-700 rounded-full;
+  }
+
+  .search-input {
+    @apply w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+
+  .btn-medical {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all;
+  }
+
+  .btn-secondary-medical {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary bg-transparent rounded-lg font-medium hover:bg-primary hover:text-primary-foreground focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all;
   }
 }
