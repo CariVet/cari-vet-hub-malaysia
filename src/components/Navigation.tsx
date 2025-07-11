@@ -45,7 +45,7 @@ const Navigation = () => {
             ))}
             <Button variant="medical" size="sm">
               <List className="w-4 h-4" />
-              List Clinics
+              List Your Clinic
             </Button>
           </div>
 
@@ -85,7 +85,7 @@ const Navigation = () => {
               <div className="pt-2">
                 <Button variant="medical" size="sm" className="w-full">
                   <List className="w-4 h-4" />
-                  List Clinics
+                  List Your Clinic
                 </Button>
               </div>
             </div>
