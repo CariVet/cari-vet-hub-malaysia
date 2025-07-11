@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Heart, Menu, X, MapPin, Phone } from 'lucide-react';
+import { PawPrint, Menu, X, MapPin, Phone } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary-foreground" />
+                <PawPrint className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-primary">CariVet</span>
             </Link>
