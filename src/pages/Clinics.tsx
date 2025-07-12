@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -276,9 +277,11 @@ const Clinics = () => {
                             <Phone className="w-4 h-4 mr-1" />
                             Call
                           </Button>
-                          <Button variant="outline" size="sm">
-                            <ExternalLink className="w-4 h-4 mr-1" />
-                            View Details
+                          <Button variant="outline" size="sm" asChild>
+                            <Link to={`/clinic/${clinic.id}`}>
+                              <ExternalLink className="w-4 h-4 mr-1" />
+                              View Details
+                            </Link>
                           </Button>
                         </div>
                       </div>
