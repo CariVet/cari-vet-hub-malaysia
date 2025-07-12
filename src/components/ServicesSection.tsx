@@ -69,10 +69,10 @@ const ServicesSection = () => {
             return (
               <div 
                 key={index} 
-                className="medical-card p-6 text-center group hover:shadow-xl transition-all duration-300"
+                className="p-6 text-center group hover:shadow-xl transition-all duration-300"
               >
-                <div className={`w-16 h-16 rounded-full ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-8 h-8" />
+                <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <IconComponent className="w-8 h-8 text-emerald-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {service.name}

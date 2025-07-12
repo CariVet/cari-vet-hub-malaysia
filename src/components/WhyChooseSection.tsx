@@ -12,7 +12,7 @@ const WhyChooseSection = () => {
       icon: MapPin,
       title: "Nationwide Coverage", 
       description: "Find trusted veterinary care across all states in Malaysia, from urban centers to rural areas.",
-      stats: "All 13 States"
+      stats: "13 States Coverage"
     },
     {
       icon: Clock,
