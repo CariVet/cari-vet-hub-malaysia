@@ -10,6 +10,7 @@ const Navigation = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Find Clinics', href: '/clinics' },
+    { name: 'Pet Care Tips', href: '/pet-care-tips' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
