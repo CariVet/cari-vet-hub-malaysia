@@ -11,6 +11,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'Find Clinics', href: '/clinics' },
     { name: 'Pet Care Tips', href: '/pet-care-tips' },
+    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

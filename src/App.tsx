@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Clinics from "./pages/Clinics";
 import ClinicDetails from "./pages/ClinicDetails";
 import PetCareTips from "./pages/PetCareTips";
+import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/clinics" element={<Clinics />} />
           <Route path="/clinic/:id" element={<ClinicDetails />} />
           <Route path="/pet-care-tips" element={<PetCareTips />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
