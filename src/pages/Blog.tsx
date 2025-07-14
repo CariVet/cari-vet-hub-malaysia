@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getFeaturedPosts, getLatestPosts } from '@/lib/blog';
@@ -91,9 +92,11 @@ const Blog = () => {
                             {article.readTime}
                           </span>
                         </div>
-                        <Button variant="outline" size="sm">
-                          Read more
-                        </Button>
+                        <Link to={`/blog/${article.slug}`}>
+                          <Button variant="outline" size="sm">
+                            Read more
+                          </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
@@ -143,9 +146,11 @@ const Blog = () => {
                             {article.readTime}
                           </span>
                         </div>
-                        <Button variant="outline" size="sm">
-                          Read more
-                        </Button>
+                        <Link to={`/blog/${article.slug}`}>
+                          <Button variant="outline" size="sm">
+                            Read more
+                          </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
