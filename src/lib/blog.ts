@@ -69,7 +69,7 @@ Vaccinations protect your pet and the broader pet community. Work with your vete
     date: '2024-03-15',
     author: 'CariVet Editorial Team',
     readTime: '8 min read',
-    image: '/lovable-uploads/b3c42214-f42c-47c1-ac17-6c5823077ca5.png',
+    image: '/src/assets/vaccination-guide.jpg',
     slug: 'understanding-vaccinations'
   },
   {
