@@ -4,73 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, User } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { getFeaturedPosts, getLatestPosts } from '@/lib/blog';
 
 const Blog = () => {
-  const featuredArticles = [
-    {
-      id: 1,
-      category: 'Preventive Care',
-      date: '2024-03-15',
-      title: 'Understanding Vaccinations: A Guide for Pet Owners',
-      description: 'Learn about essential vaccinations for dogs and cats, when they should be administered, and why they\'re crucial for your pet\'s health.',
-      author: 'CariVet Editorial Team',
-      readTime: '5 min read',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 2,
-      category: 'Wellness',
-      date: '2024-03-20',
-      title: 'Dental Health in Pets: More Important Than You Think',
-      description: 'Discover why dental care is vital for your pet\'s overall health and learn practical tips for maintaining good oral hygiene at home.',
-      author: 'CariVet Editorial Team',
-      readTime: '4 min read',
-      image: '/placeholder.svg'
-    }
-  ];
-
-  const latestArticles = [
-    {
-      id: 3,
-      category: 'Feline Health',
-      date: '2024-03-18',
-      title: 'Recognizing Signs of Pain in Cats: What to Look For',
-      description: 'Cats are masters at hiding pain. Learn the subtle signs that indicate your feline friend is suffering and when to seek veterinary care.',
-      author: 'CariVet Editorial Team',
-      readTime: '6 min read',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 4,
-      category: 'Nutrition',
-      date: '2024-03-16',
-      title: 'Nutrition for Senior Dogs: Adapting to Changing Needs',
-      description: 'As dogs age, their nutritional requirements change. Find out how to adjust your senior dog\'s diet to support their health in their golden years.',
-      author: 'CariVet Editorial Team',
-      readTime: '7 min read',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 5,
-      category: 'Preventive Care',
-      date: '2024-03-12',
-      title: 'Parasite Prevention: Protecting Your Pet Year-Round',
-      description: 'Learn about common parasites that can affect your pets, their potential health impacts, and effective prevention strategies for all seasons.',
-      author: 'CariVet Editorial Team',
-      readTime: '5 min read',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 6,
-      category: 'Behavior',
-      date: '2024-03-10',
-      title: 'Managing Anxiety in Pets: From Thunderstorms to Separation',
-      description: 'Discover effective strategies to help pets cope with various anxiety triggers and learn when it\'s time to consider professional help.',
-      author: 'CariVet Editorial Team',
-      readTime: '8 min read',
-      image: '/placeholder.svg'
-    }
-  ];
+  const featuredArticles = getFeaturedPosts();
+  const latestArticles = getLatestPosts();
 
   const categories = [
     'Preventive Care',
